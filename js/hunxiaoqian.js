@@ -262,7 +262,6 @@ function create(){
 
     let 排版 = '<div>' + 文章.join('</div><div>') + '</div>';
     $('#文章').innerHTML = 排版;
-    $('#声明文字').style.display = 'block'
 }
 
 if (parameters('主题')) {
