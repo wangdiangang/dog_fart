@@ -190,7 +190,7 @@ let multiplier = 214013;
 let addend = 2531011;
 let module = Math.pow(2,32);
 
-let seed = parameters('随机种子') || down( take(0, module, Math.random) );
+let seed = parameters('zhongzi') || down( take(0, module, Math.random) );
 
 let 主题 = parameters('主题') || sentence(theme)
 
@@ -234,7 +234,7 @@ function 增加段落(段落){
 
 function create(){
     主题 = $('input').value
-    history.pushState({url: window.location.href}, null ,'?主题=' + 主题 + '&随机种子=' + seed);
+    history.pushState({url: window.location.href}, null ,'?zhuti_2=' + 主题 + '&zhongzi=' + seed);
     track('generator', 主题, seed);
     let 文章 = []
     let 段落 = '';
@@ -261,7 +261,7 @@ function create(){
     文章.push(段落);
 
     let 排版 = '<div>' + 文章.join('</div><div>') + '</div>';
-    $('#文章').innerHTML = 排版;
+    $('#wenzhang').innerHTML = 排版;
 }
 
 if (parameters('主题')) {
